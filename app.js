@@ -1,4 +1,3 @@
-import { mapTableName } from './conn.js'
+import { mapTableStructure } from './conn.js'
 
-let tableNames = await mapTableName()
-console.log('tableNames ', tableNames)
+await mapTableStructure()
