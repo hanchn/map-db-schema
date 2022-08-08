@@ -2,5 +2,5 @@ export default {
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'test'
+    database: 'monitoring'
 }
