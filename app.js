@@ -1,3 +1,4 @@
 import { mapTableStructure } from './conn.js'
 
-await mapTableStructure()
+const structure = await mapTableStructure()
+console.log('structure ', structure)

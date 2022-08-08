@@ -38,6 +38,7 @@ export const mapTableStructure = async() => {
     tables.map(async table => {
         const queryStructure = `select * from information_schema.columns where table_schema= "${config.database}" and table_name = "${table}"`
         const { error, res } = await query(queryStructure)
+        connection.end()
         if (!error) {
             return [...res]
         } else {
