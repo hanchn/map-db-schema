@@ -1,0 +1,23 @@
+{
+    "name": "map-db-structure",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "structure": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hanchn/map-db-structure.git"
+    },
+    "author": "hanchn",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hanchn/map-db-structure/issues"
+    },
+    "homepage": "https://github.com/hanchn/map-db-structure#readme",
+    "dependencies": {
+        "mysql": "^2.18.1"
+    }
+}
