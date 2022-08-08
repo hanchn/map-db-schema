@@ -33,16 +33,16 @@ export const mapTableName = async() => {
  * mapTableStructure
  * 获取表格相关的所有结构
  */
-export const mapTableStructure = async() => {
-    let tables = await mapTableName()
-    tables.map(async table => {
-        const queryStructure = `select * from information_schema.columns where table_schema= "${config.database}" and table_name = "${table}"`
-        const { error, res } = await query(queryStructure)
-        connection.end()
-        if (!error) {
-            return [...res]
-        } else {
-            return []
-        }
+export const mapTableStructure = () =>
+    new Promise(async(reslove) => {
+        let tables = await mapTableName()
+        tables.map(async table => {
+            const queryStructure = `select * from information_schema.columns where table_schema= "${config.database}" and table_name = "${table}"`
+            const { error, res } = await query(queryStructure)
+            if (!error) {
+                return reslove(res)
+            } else {
+                return reslove([])
+            }
+        })
     })
-}
